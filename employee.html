@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals Data</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{}
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url("imgs/banner.jpg");
+            background-size: cover;
+            background-position: top 25% right 0;
+            justify-content: center;
+        }
+        /* Header Start */
+        
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #000000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+            height: 80px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 70px;
+            overflow: hidden;
+        }
+        
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #navbar li {
+            list-style: none;
+            padding: 0 40px;
+            position: relative;
+        }
+        
+        #navbar li a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            transition: 0.35s ease-in-out;
+        }
+        
+        #navbar li a:hover {
+            color: #cbaa00;
+        }
+        
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #cbaa00;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 100%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+        }
+        
+        label {
+            margin-top: 10px;
+            padding-right: 20px;
+        }
+        
+        input {
+            margin-right: 20px;
+            height: 40px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            margin-left: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100px;
+            font-size: 18px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="imgs/LOGO.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="employee.html" class="active">RENTALS</a></li>
+                <li><a href="contact.html"><button class="normal" style="width: 130px;">CONTACT US</button></a></li>
+                <li><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="">
+        <div class="container">
+            <h1>Rentals Data Form</h1>
+            <form id="employeeForm">
+                <label for="employeeId">Rental ID:</label>
+                <input type="text" id="employeeId" name="employeeId" required>
+
+                <label for="name">Machine Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="dateOfJoining">Rentals Availability:</label>
+                <input type="date" id="dateOfJoining" name="dateOfJoining" required>
+
+                <label for="salary">Cost of Rental (per day):</label>
+                <input type="number" id="salary" name="salary" required>
+
+                <button type="submit">Save</button>
+            </form>
+            <h2>Available Machines</h2>
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>Rental ID</th>
+                        <th>Machine Name</th>
+                        <th>Rentals Availability</th>
+                        <th>Cost of Rental (per day)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Employee rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    
+    <footer id="footer" class="section-p1">
+        <div class="col">
+            <img src="imgs/LOGO.png" class="logo" alt="">
+            <h4>Contact US :</h4>
+            <p><strong>Address : </strong>A-01,111 ABC Rd, Industrial Area, XYZ-State, ABC-City</p>
+            <p><strong>Phone : </strong>+91 941xxxxx96</p>
+            <p><strong>Hours : </strong> 10:00 A.M. - 6:30 P.M., Mon - Fri </p>
+            <div class="follow">
+                <h4>Follow Us :</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div><br>
+        </div>
+        <div class="col">
+            <h4>Our Redirection Links : </h4>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Explore</a>
+            <a href="#">Rentals</a>
+            <a href="#">Contacts</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App : </h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="imgs/pay/app.jpg" alt="">
+                <img src="imgs/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateway</p>
+            <img src="imgs/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Nikhil Constructions</p>
+        </div>
+    </footer>
+</body>
+
+</html>

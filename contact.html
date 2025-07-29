@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/LOGO.jpg">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="imgs/LOGO.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="employee.html">RENTALS</a></li>
+                <li><a href="contact.html"><button class="normal">CONTACT US</button></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="call-header">
+        <h2>Contact Us</h2>
+    </section>
+
+    <section id="contact-detail" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH!!!</span>
+            <h2>Set up a meeting today and discuss your thoughts</h2>
+            <h4>Head office</h3>
+                <div>
+                    <li>
+                        <i class="fal fa-map"></i>
+                        <p>A-01,111 ABC Rd, Industrial Area, XYZ-State, ABC-City</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-envelope"></i>
+                        <p>info@nikhilconstructions.com</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-phone-alt"></i>
+                        <p>+91 941xxxxx96</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-clock"></i>
+                        <p>Monday to Friday : 10:00 A.M. to 6:30 P.M. (IST)</p>
+                    </li>
+                </div>
+        </div>
+        <img src="imgs/Client-Meet.jpg" alt="">
+    </section>
+
+    <section id="form-details" class="section-p1">
+        <div class="form-container">
+            <h2>LEAVE A MESSAGE</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Name" required><br/>
+                <input type="text" name="phone" placeholder="Phone Number" required><br/>
+                <input style="width: 495px; height: 40px; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc; background-color: rgba(255, 255, 255, 0.65);" type="email" name="email" placeholder="E-Mail" required><br/>
+                <input type="text" name="location" placeholder="Location" required><br/>
+                <textarea name="message" placeholder="Your Message Here" required></textarea><br/>
+                <button class="normal" type="submit">SUBMIT NOW</button>
+            </form>
+        </div>
+        <div class="people">
+            <div>
+                <img src="imgs/People/People1.jpg" alt="">
+                <p>XYZ-Name-1<br> Owner <br> Phone : +91 123 456 xxxx <br> Email : XYZ-Name-1@example.com</p>
+            </div>
+            <div>
+                <img src="imgs/People/People2.jpg" alt="">
+                <p>XYZ-Name-2<br> Senior Marketing Manager <br> Phone : +91 123 456 xxxx <br> Email : XYZ-Name-2@example.com</p>
+            </div>
+            <div>
+                <img src="imgs/People/People3.jpg" alt="">
+                <p>XYZ-Name-3<br> Junior Marketing Manager <br> Phone : +91 123 456 xxxx <br> Email : XYZ-Name-3@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="section-p1">
+        <div class="col">
+            <img src="imgs/LOGO.png" class="logo" alt="">
+            <h4>Contact US :</h4>
+            <p><strong>Address : </strong>A-01,111 ABC Rd, Industrial Area, XYZ-State, ABC-City</p>
+            <p><strong>Phone : </strong>+91 941xxxxx96</p>
+            <p><strong>Hours : </strong> 10:00 A.M. - 6:30 P.M., Mon - Fri </p>
+            <div class="follow">
+                <h4>Follow Us :</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div><br>
+        </div>
+        <div class="col">
+            <h4>Our Redirection Links : </h4>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Explore</a>
+            <a href="#">Rentals</a>
+            <a href="#">Contacts</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App : </h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="imgs/pay/app.jpg" alt="">
+                <img src="imgs/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateway</p>
+            <img src="imgs/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Nikhil Constructions</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('b80vIi3ct3Sqbu42P'); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_nq0e1iz', 'template_2ao3sfr', this)
+                .then(function(response) {
+                    alert('SUCCESS!', response.status, response.text);
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    alert('FAILED...', error);
+                });
+        });
+    </script>
+</body>
+
+</html>
